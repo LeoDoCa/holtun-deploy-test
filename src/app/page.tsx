@@ -240,10 +240,10 @@ export default function Home() {
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-primary shrink-0" />
                   <a
-                    href="mailto:dra.yaritza@holtunholistico.com"
+                    href="mailto:holtun01@gmail.com"
                     className="text-foreground/80 hover:text-primary transition-colors"
                   >
-                    dra.yaritza@holtunholistico.com
+                    holtun01@gmail.com
                   </a>
                 </div>
 

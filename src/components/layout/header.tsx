@@ -39,7 +39,7 @@ export default function Header() {
   const Logo = () => (
     <Link
       href="/"
-      className="group flex items-center gap-2"
+      className="group flex items-center gap-1"
       onClick={() => isOpen && setIsOpen(false)}
     >
       <div className="relative">
@@ -53,7 +53,7 @@ export default function Header() {
       </div>
 
       <span className="font-headline text-xl font-bold tracking-wider text-foreground transition-colors duration-300 group-hover:text-primary">
-        HOLTUN
+        HÓLTUN
       </span>
     </Link>
   );

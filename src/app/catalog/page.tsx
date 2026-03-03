@@ -30,7 +30,7 @@ export default function CatalogPage() {
                   <h2 className="font-headline text-2xl font-semibold">{category.name}</h2>
                   <p className="mt-2 text-foreground/70 flex-grow">{category.description}</p>
                   <span className="mt-4 text-primary font-semibold group-hover:underline flex items-center gap-2">
-                    Comprar Ahora
+                    Explorar colección
                     <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
                   </span>
                 </div>

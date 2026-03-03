@@ -12,7 +12,7 @@ const Footer = () => {
     <footer className="bg-card border-t">
       <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center">
-          <Link href="/" className="group flex items-center gap-2">
+          <Link href="/" className="group flex items-center gap-1">
             <Image
               src="/images/logo.png"
               alt="Logo Holtun"
@@ -21,7 +21,7 @@ const Footer = () => {
               className="object-contain transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:drop-shadow-lg"
             />
             <span className="font-headline text-2xl font-bold tracking-wider text-foreground transition-colors duration-300 group-hover:text-primary">
-              HOLTUN
+              HÓLTUN
             </span>
           </Link>
           <p className="mt-4 text-foreground/70 text-base max-w-xs">
@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 border-t border-border pt-8">
-          <p className="text-base text-foreground/60 text-center">&copy; {new Date().getFullYear()} Esencia Holtun. Todos los derechos reservados.</p>
+          <p className="text-base text-foreground/60 text-center">&copy; {new Date().getFullYear()} Hóltun Centro Holístico. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

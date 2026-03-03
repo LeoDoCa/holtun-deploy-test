@@ -6,8 +6,11 @@ import Footer from '@/components/layout/footer';
 import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
-  title: 'Esencia Holtum',
+  title: 'Hóltun Centro Holístico',
   description: 'Aceites esenciales naturales y productos de bienestar.',
+  icons: {
+    icon: '/icon.png'
+  },
 };
 
 export default function RootLayout({

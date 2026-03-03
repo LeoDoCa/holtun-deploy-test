@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Leaf, Droplets, Sun, Target, Eye } from 'lucide-react';
+import { Leaf, Droplets, Sun, Target, Eye, MapPin, Clock, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -23,6 +23,16 @@ const benefits = [
     description:
       'Cada aceite está pensado para abrazar tus sentidos, reconectar contigo mismo y llenar tu espacio de armonía, luz y bienestar natural.',
   },
+];
+
+const schedule = [
+  { day: 'Lunes', hours: '9:00 am - 5:00 pm' },
+  { day: 'Martes', hours: '9:00 am - 5:00 pm' },
+  { day: 'Miércoles', hours: '9:00 am - 5:00 pm' },
+  { day: 'Jueves', hours: '9:00 am - 5:00 pm' },
+  { day: 'Viernes', hours: '9:00 am - 5:00 pm' },
+  { day: 'Sábado', hours: '9:00 am - 5:00 pm' },
+  { day: 'Domingo', hours: 'Cerrado' },
 ];
 
 export default function Home() {
@@ -50,7 +60,7 @@ export default function Home() {
             size="lg"
             className="mt-8 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
           >
-            <Link href="/catalog">Explora Nuestra Colección</Link>
+            <Link href="/catalog">Explora Nuestro Catálogo</Link>
           </Button>
         </div>
       </section>
@@ -63,7 +73,7 @@ export default function Home() {
               Sobre Nosotros
             </h2>
             <p className="mt-6 text-lg text-foreground/80 leading-relaxed">
-              HOLTÚN es un centro holístico que nace con el propósito de
+              Hóltun es un centro holístico que nace con el propósito de
               restaurar el equilibrio y la paz que la vida ajetreada quita a
               nuestra comunidad. Con ayuda de la naturaleza y técnicas
               ancestrales, ofrecemos la oportunidad de llevar un estilo de vida
@@ -71,7 +81,7 @@ export default function Home() {
               masajes, acupuntura y más.
             </p>
             <p className="mt-4 text-lg text-foreground/80 leading-relaxed">
-              Holtún está listo para recibirte y acompañarte en tu día a día,
+              Hóltun está listo para recibirte y acompañarte en tu día a día,
               brindándote un espacio donde el mundo moderno y la sabiduría
               ancestral se encuentran.
             </p>
@@ -118,7 +128,7 @@ export default function Home() {
                 Restaurar el balance del ajetreado estilo de vida que llevamos,
                 ofreciendo servicios y productos de calidad. Ya sea que reserves
                 una cita en nuestro centro holístico o consumas nuestros productos,
-                Holtún traerá de vuelta el equilibrio que necesitabas.
+                Hóltun traerá de vuelta el equilibrio que necesitabas.
               </p>
             </div>
 
@@ -175,6 +185,96 @@ export default function Home() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Ubicación y Horarios Section */}
+      <section className="bg-card py-20 md:py-32 mt-10">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="font-headline text-3xl md:text-4xl font-semibold text-foreground">
+              Ubicación y Horarios
+            </h2>
+            <p className="mt-4 text-lg text-foreground/80">
+              Ven a visitarnos, estaremos encantados de recibirte.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-10 items-start">
+            {/* Mapa */}
+            <div className="rounded-xl overflow-hidden shadow-md w-full h-full">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.9467262190897!2d-99.20572862155939!3d18.933752056771915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cddfa368e1c139%3A0xbfe9dffde81e0b85!2sH%C3%B3ltun%20Centro%20Hol%C3%ADstico!5e0!3m2!1ses!2smx!4v1772562017130!5m2!1ses!2smx"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+
+            {/* Info */}
+            <div className="flex flex-col gap-8">
+              {/* Dirección y contacto */}
+              <div className="flex flex-col gap-4">
+                <div className="flex items-start gap-3">
+                  <MapPin className="h-5 w-5 text-primary mt-1 shrink-0" />
+                  <div>
+                    <p className="text-foreground font-medium">Avenida Río Mayo, 1406</p>
+                    <p className="text-foreground/80">Cuernavaca, Mor. 62290</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <Phone className="h-5 w-5 text-primary shrink-0" />
+                  <a
+                    href="tel:5516905076"
+                    className="text-foreground/80 hover:text-primary transition-colors"
+                  >
+                    55 16905076
+                  </a>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <Mail className="h-5 w-5 text-primary shrink-0" />
+                  <a
+                    href="mailto:dra.yaritza@holtunholistico.com"
+                    className="text-foreground/80 hover:text-primary transition-colors"
+                  >
+                    dra.yaritza@holtunholistico.com
+                  </a>
+                </div>
+
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=Avenida+Río+Mayo+1406+Cuernavaca+Mor.+62290"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-primary/80 font-medium transition-colors underline underline-offset-4 w-fit"
+                >
+                  Cómo llegar →
+                </a>
+              </div>
+
+              {/* Horarios */}
+              <div className="flex items-start gap-3">
+                <Clock className="h-5 w-5 text-primary mt-1 shrink-0" />
+                <div className="w-full">
+                  <p className="text-foreground font-medium mb-3">Horarios de atención</p>
+                  <div className="flex flex-col gap-1.5">
+                    {schedule.map(({ day, hours }) => (
+                      <div key={day} className="flex justify-between text-foreground/80">
+                        <span className="font-medium text-foreground/90">{day}</span>
+                        <span className={hours === 'Cerrado' ? 'text-foreground/50 italic' : ''}>
+                          {hours}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
